@@ -16,4 +16,14 @@ pip install sheepit_team_clean_aleluya
 sheepit_team_clean_aleluya
 ```
 
+### Notes:
+Thank You Jesus for https://dzone.com/articles/executable-package-pip-install
+```
+pip install --upgrade pip setuptools wheel tqdm twine
 
+python setup.py bdist_wheel
+
+python -m pip install dist/sheepit_team_clean_aleluya.0.1.whl
+
+python -m twine upload dist/*
+```
