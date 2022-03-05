@@ -1,5 +1,6 @@
 # For God so loved the world, that He gave His only begotten Son, that all who believe in Him should not perish but have everlasting life
 import setuptools
+from _version import __version__
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
@@ -7,7 +8,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
      name='sheepit_team_clean_aleluya',  
-     version='0.1',
+     version=__version__,
      scripts=['sheepit_team_clean_aleluya'] ,
      author="Love Jesus",
      author_email="loveJesus@loveJesus.xyz",
@@ -18,7 +19,7 @@ setuptools.setup(
      packages=setuptools.find_packages(),
      classifiers=[
          "Programming Language :: Python :: 3",
-         "License :: OSI Approved :: GPL3",
+         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
          "Operating System :: OS Independent",
      ],
  )

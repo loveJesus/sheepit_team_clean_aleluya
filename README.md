@@ -9,11 +9,37 @@ This program helps team administrators find team members that have not rendered 
 and will remove them from the team.
 
 ## Install and Run
-```
+```shell
 pip install sheepit_team_clean_aleluya
 
 # Assuming your python pip path is in $PATH 
-sheepit_team_clean_aleluya
+sheepit_team_clean_aleluya -u <login username> -p <login password> -t <team id>
+```
+
+### Help
+```text
+usage: sheepit_team_clean_aleluya [-h] --team_id TEAM_ID_ALELUYA --username USERNAME_ALELUYA --password PASSWORD_ALELUYA [--dry_run] [--max_score MAX_SCORE_ALELUYA] [--min_score MIN_SCORE_ALELUYA]
+                                  [--exclude_member EXCLUDED_MEMBERS_ALELUYA]
+
+Log in to sheepit and remove members from a team that have not rendered in over 31 days, that are within a specified point range.
+
+options:
+  -h, --help            show this help message and exit
+  --team_id TEAM_ID_ALELUYA, -t TEAM_ID_ALELUYA
+                        The id of the team to clean
+  --username USERNAME_ALELUYA, -u USERNAME_ALELUYA
+                        Login username of team admin
+  --password PASSWORD_ALELUYA, -p PASSWORD_ALELUYA
+                        Login password of team admin
+  --dry_run, -d         Dry run
+  --max_score MAX_SCORE_ALELUYA, -M MAX_SCORE_ALELUYA
+                        Max score of user that will still be removed
+  --min_score MIN_SCORE_ALELUYA, -m MIN_SCORE_ALELUYA
+                        Minimum score of user that will still be removed
+  --exclude_member EXCLUDED_MEMBERS_ALELUYA, -X EXCLUDED_MEMBERS_ALELUYA
+                        Members to exclude from being removed, can be placed several times
+
+in Jesus Christ's name
 ```
 
 ### Notes:
@@ -23,7 +49,7 @@ pip install --upgrade pip setuptools wheel tqdm twine
 
 python setup.py bdist_wheel
 
-python -m pip install dist/sheepit_team_clean_aleluya.0.1.whl
+python -m pip install dist/sheepit_team_clean_aleluya-0.1.1-py3-none-any.whl
 
 python -m twine upload dist/*
 ```

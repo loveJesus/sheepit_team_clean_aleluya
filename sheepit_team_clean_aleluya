@@ -7,6 +7,7 @@ import sys
 from html.parser import HTMLParser
 
 import requests
+from _version import __version__
 
 
 class TeamPageParserAleluya(HTMLParser):
@@ -126,6 +127,8 @@ def process_args_chirho():
     parser_aleluya.add_argument(
         '--exclude_member', '-X', action="append", dest="excluded_members_aleluya", type=str,
         help='Members to exclude from being removed, can be placed several times')
+    parser_aleluya.add_argument(
+        '--version', '-v', action='version', version=f'%(prog)s {__version__}')
 
     args_aleluya = parser_aleluya.parse_args()
     return args_aleluya
