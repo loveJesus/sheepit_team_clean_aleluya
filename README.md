@@ -38,6 +38,7 @@ options:
                         Minimum score of user that will still be removed
   --exclude_member EXCLUDED_MEMBERS_ALELUYA, -X EXCLUDED_MEMBERS_ALELUYA
                         Members to exclude from being removed, can be placed several times
+  --version, -v         show program's version number and exit
 
 in Jesus Christ's name
 ```
@@ -49,7 +50,7 @@ pip install --upgrade pip setuptools wheel tqdm twine
 
 python setup.py bdist_wheel
 
-python -m pip install dist/sheepit_team_clean_aleluya-0.1.1-py3-none-any.whl
+python -m pip install dist/sheepit_team_clean_aleluya-0.1.2-py3-none-any.whl
 
 python -m twine upload dist/*
 ```
