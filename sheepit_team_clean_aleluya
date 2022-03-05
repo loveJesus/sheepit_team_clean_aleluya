@@ -50,7 +50,7 @@ class TeamPageParserAleluya(HTMLParser):
             else:
                 self._last_score_aleluya = 0
 
-    def get_team_member_names_aleluya(self) -> dict[str, int]:
+    def get_team_member_names_aleluya(self) -> dict:
         """
         Hallelujah - after running .feed , return the resulting team members to their scores
         :return: set of team member names
@@ -226,7 +226,7 @@ def main_aleluya():
                     continue
                 remove_member_from_team_aleluya(session_aleluya, team_member_name_aleluya, team_id_aleluya)
 
-    print("ALELUYA")
+    print("ALELUYA Finished")
 
 
 if __name__ == '__main__':
