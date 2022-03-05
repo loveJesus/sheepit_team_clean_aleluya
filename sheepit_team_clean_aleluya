@@ -4,10 +4,12 @@
 import argparse
 import re
 import sys
+import requests
+import pkg_resources  # part of setuptools
+
 from html.parser import HTMLParser
 
-import requests
-from _version import __version__
+__version__ = pkg_resources.require("sheepit_team_clean_aleluya")[0].version
 
 
 class TeamPageParserAleluya(HTMLParser):
