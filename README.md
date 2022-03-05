@@ -50,7 +50,7 @@ pip install --upgrade pip setuptools wheel tqdm twine
 
 python setup.py bdist_wheel
 
-python -m pip install dist/sheepit_team_clean_aleluya-0.1.2-py3-none-any.whl
+python -m pip install dist/sheepit_team_clean_aleluya-0.1.3-py3-none-any.whl
 
 python -m twine upload dist/*
 ```
